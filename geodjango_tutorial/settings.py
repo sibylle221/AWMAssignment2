@@ -16,6 +16,8 @@ from pathlib import Path
 from decouple import config
 import dj_database_url
 
+# PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, ‘static/js’, ‘serviceworker.js’)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'leaflet',
     'django.contrib.gis',
     'world.apps.WorldConfig',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -153,3 +156,32 @@ else:
     DATABASES["default"]["HOST"] = "wmap-postgis"   #"wmap-postgis" # f"{docker_config.AWMASSIGN}-postgis"
     DATABASES["default"]["PORT"] = 5432
 
+# PWA_APP_NAME = 'Fuel Finder'
+# PWA_APP_DESCRIPTION = "Fuel Finder PWA"
+# PWA_APP_THEME_COLOR = '#000000'
+# PWA_APP_BACKGROUND_COLOR = '#ffffff'
+# PWA_APP_DISPLAY = 'standalone'
+# PWA_APP_SCOPE = '/'
+# PWA_APP_ORIENTATION = 'any'
+# PWA_APP_START_URL = '/'
+# PWA_APP_STATUS_BAR_COLOR = 'default'
+# PWA_APP_ICONS = [
+#     {
+#         'src': 'static/images/icon-160x160.png',
+#         'sizes': '160x160'
+#     }
+# ]
+# PWA_APP_ICONS_APPLE = [
+#     {
+#         'src': 'static/images/icon-160x160.png',
+#         'sizes': '160x160'
+#     }
+# ]
+# PWA_APP_SPLASH_SCREEN = [
+#     {
+#         'src': 'static/images/icon.png',
+#         'media': '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+#     }
+# ]
+# PWA_APP_DIR = 'ltr'
+# PWA_APP_LANG = 'en-US'
